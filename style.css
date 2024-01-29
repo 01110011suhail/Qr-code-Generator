@@ -1,10 +1,13 @@
+/* Global color and style variables */
 :root{
-    --bcg-color: rgb(31, 31, 31);
-    --primary-color: rgb(129, 57, 129);
-    --border-radius: 8px;
-    --secondary-color: black;
-    --border-color: #f0060e;
+    --bcg-color: rgb(31, 31, 31);          /* Background color */
+    --primary-color: rgb(129, 57, 129);    /* Primary color */
+    --border-radius: 8px;                 /* Border radius */
+    --secondary-color: black;              /* Secondary color */
+    --border-color: #f0060e;               /* Border color */
 }
+
+/* Reset default styling */
 *{
     margin: 0;
     padding: 0;
@@ -12,6 +15,7 @@
     font-family: sans-serif;
 }
 
+/* Body styling */
 body{
     width: 100%;
     height: 100vh;
@@ -21,6 +25,7 @@ body{
     background-color: var(--bcg-color);
 }
 
+/* Main container styling */
 .box{
     background-color: var(--primary-color);
     padding: 30px;
@@ -28,6 +33,7 @@ body{
     border-radius: var(--border-radius);
 }
 
+/* Header section styling */
 .qr-header h1{
     font-size: 26px;
     text-align: center;
@@ -36,35 +42,36 @@ body{
     text-transform: uppercase;
 }
 
-.qr-header input{
+/* Input and Select styling */
+.qr-header input, .qr-header select{
     width: 100%;
-    margin-block: 12px;
-    
-}
-
-.qr-header input, select{
     padding: 8px;
     border-radius: var(--border-radius);
     font-size: 18px;
     outline: none;
-    
     border: 4px solid rgb(62, 2, 62);
+    margin-block: 12px;
 }
 
+/* Label styling */
 .qr-header label{
     color: rgb(0, 0, 0);
     font-size: 20px;
 }
 
+/* Header div styling */
 .qr-header div{
     display: flex;
     justify-content: space-between;
 }
 
+/* Footer section styling */
 .qr-footer{
     display: flex;
     justify-content: center;
 }
+
+/* Button styling */
 .qr-footer a{
     background-color: rgb(255, 243, 243);
     text-decoration: none;
@@ -72,19 +79,27 @@ body{
     padding: 14px 36px;
     margin-inline: 3px;
     color: black;
-    font-weight: 10;
+    font-weight: 700;
     border-radius: 290px;
     border: 4px solid rgb(36, 2, 36);
     border-radius: 20px;
- 
+    transition: background-color 0.3s ease-in-out;  /* Smooth transition effect */
+
 }
 
+/* Hover effect for buttons */
+.qr-footer a:hover {
+    background-color: var(--border-color);  /* Change color on hover */
+}
+
+/* Body section styling */
 .qr-body{
     display: grid;
     place-items: center;
-    padding:20px;
+    padding: 20px;
 }
 
+/* QR code image styling */
 .qr-body img{
     max-width: 100%;
     max-height: 100%;
@@ -94,10 +109,12 @@ body{
     border-radius: 20px;
 }
 
+/* Responsive styling for smaller screens */
 @media screen and (max-width:520px){
     .box{
         width: 80%;
     }
+
     .qr-footer a{
         padding: 12px;
         font-size: 16px;
