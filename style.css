@@ -72,3 +72,8 @@ body{
     color: black;
     font-weight: 700;
 }
+.qr-body{
+    display: grid;
+    padding: 20px;
+    place-items: center;
+}
