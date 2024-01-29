@@ -1,68 +1,69 @@
-
-:root{
-    --bg-clr:rgb(21, 5, 39);
+:root {
+    --bg-clr: rgb(21, 5, 39);
     --primary-clr: gold;
-    --secondary-clr:rgb(169, 172, 174);
+    --secondary-clr: rgb(169, 172, 174);
 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
-
 }
-body{
+
+body {
     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--bg-clr)
+    background-color: var(--bg-clr);
+}
 
-}
-.box{
+.box {
     background-color: var(--secondary-clr);
-    padding: 30px;
+    padding: 10px; /* Reduced padding to prevent oversized content */
     border-radius: 8px;
-    
+    max-width: 400px; /* Set a maximum width to avoid excessive width */
+    margin: auto; /* Center the box horizontally */
 }
-.qr-header h1{
+
+.qr-header h1 {
     font-size: 40px;
     text-align: center;
     color: black;
     margin-block: 12px;
     text-transform: uppercase;
-    
-    
 }
-.qr-header input{
+
+.qr-header input {
     width: 100%;
-    
     margin-block: 12px;
 }
-.qr-header input, select{
+
+.qr-header input, select {
     padding: 8px;
     border-radius: 8px;
     font-size: 18px;
-    border: 2px solid color( blue);
+    border: 2px solid blue; 
     outline: none;
 }
-.qr-header label{
+
+.qr-header label {
     font-size: 22px;
     margin-right: 30px;
-    
     color: rgb(19, 7, 1);
 }
-.qr-header div{
+
+.qr-header div {
     display: flex;
     justify-content: space-between;
-
 }
-.qr-footer{
-    margin-top: 30px;
+
+.qr-footer {
     display: flex;
     justify-content: center;
 }
-.qr-footer a{
+
+.qr-footer a {
     background-color: whitesmoke;
     font-size: 20px;
     padding: 16px 28px;
@@ -72,8 +73,20 @@ body{
     color: black;
     font-weight: 700;
 }
-.qr-body{
+
+.qr-body {
     display: grid;
     padding: 20px;
     place-items: center;
+    max-height: 300px; /* Set a maximum height to allow scrolling */
+    overflow-y: auto; /* Enable vertical scrolling when content exceeds max-height */
+}
+
+.qr-body img {
+    max-width: 100%;
+    max-height: 100%;
+    margin-block: 10px;
+    padding: 2px;
+    border: 1px solid color(grey red green blue); 
+    border-radius: 8px;
 }
